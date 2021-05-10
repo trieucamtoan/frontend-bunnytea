@@ -1,22 +1,26 @@
-import logo from './logo.svg';
+import bunnyLogo from '../src/icons/bunny-logo-white.svg';
+import bunnyTitle from '../src/icons/bunny-title-white.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img 
+          src={bunnyLogo} 
+          style={{
+            height: '300px', 
+            width: '300px'
+          }}
+          alt="bunnyLogo" />
+
+        <img 
+          src={bunnyTitle} 
+          style={{
+            height: '300px', 
+            width: '300px'
+          }}
+          alt="bunnyTitle"/>
       </header>
     </div>
   );
