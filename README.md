@@ -1,9 +1,9 @@
 # After Pull
 
-Run 'npm install request' to update node_modules
+- Run 'npm install request' to update node_modules
 
 # Start the project
-Run 'npm start'
+- Run 'npm start'
 
 # Dev branch for the project
 - Push to 'dev' branch
