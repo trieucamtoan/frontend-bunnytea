@@ -1,20 +1,11 @@
 import styled from 'styled-components'
 import {Link as LinkRouter} from 'react-router-dom'
 import {Link as LinkScroll} from 'react-scroll'
-
-// import styled, {css} from 'styled-components/macro'
-
-// import { menuData } from '../data/MenuData'
-// import { Button } from './Button'
-import {GiHamburgerMenu} from 'react-icons/gi'
-// import BunnyTeaLogo from '../img/bunny-tea-logo-sm.svg'
-// import BunnyTeaTitle from '../img/bunny-tea-title-sm.svg'
-import {HiMenuAlt1} from 'react-icons/hi';
+import {BsList} from 'react-icons/bs';
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
+    background: ${({scrollNav}) => (scrollNav ? 'white' : 'white')};
     height: 70px;
-    margin-top: -70px;
     display: flex;
     font-size: 1rem;
     justify-content: center;
@@ -29,7 +20,7 @@ export const Nav = styled.nav`
 
 export const NavBarContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 70px;
     z-index: 1;
     width: 100%;
@@ -38,18 +29,27 @@ export const NavBarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkRouter)`
+    width: 40px;
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
+
     display: flex;
     align-items: center;
-    margin-left: 40px;
-    font-weight: bold;
-    text-decoration: none;
 `
 
-export const MobileIcon = styled(HiMenuAlt1)`
+export const NavTitle = styled(LinkRouter)`
+    display: flex;
+    justify-self: flex-start;
+    cursor: pointer;
+    width: 250px;
+    @media screen and (max-width: 1250px) {
+        display: none;
+    }
+`
+
+export const MobileIcon = styled(BsList)`
     display: none;
 
     @media screen and (max-width: 768px) {
@@ -68,6 +68,7 @@ export const NavMenu = styled.ul`
     align-item: center;
     list-style: none;
     text-align: center;
+    padding-right: 60px;
     margin-right: -22px;
 
     @media screen and (max-width: 768px) {
@@ -80,16 +81,16 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
-    color: #fff;
+    color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 100%;
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #01bf71;
+        border-bottom: 3px solid black;
     }
 `
 
@@ -119,7 +120,7 @@ export const NavBtnLink = styled(LinkRouter)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        color: #010606;
+        color: black;
     }
 `
 

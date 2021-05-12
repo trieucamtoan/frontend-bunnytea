@@ -1,7 +1,7 @@
 import CupTea from '../../img/cup-tea.svg';
 
-export const aboutSection = {
-    id: 'about',
+export const homeSection = {
+    id: 'home',
     lightBg: false,
     lightText: true,
     lightTextDescription: true,

@@ -7,13 +7,14 @@ import {IconContext} from 'react-icons/lib'
 // import { menuData } from '../data/MenuData'
 // import { Button } from './Button'
 // import {GiHamburgerMenu} from 'react-icons/gi'
-// import BunnyTeaLogo from '../img/bunny-tea-logo-sm.svg'
-// import BunnyTeaTitle from '../img/bunny-tea-title-sm.svg'
+import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
+import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
 
 import {
     Nav, 
     NavBarContainer, 
     NavLogo, 
+    NavTitle,
     MobileIcon, 
     NavMenu,
     NavItem, 
@@ -129,18 +130,34 @@ const NavBar = ({toggle}) => {
            </NavBtn> */}
 
            <NavBarContainer>
-               <NavLogo to = "/" onClick={toggleHome}>Bunny Tea</NavLogo>
-               <MobileIcon onClick = {toggle}/>
+               <NavLogo to ="/" onClick={toggleHome}>
+                   <img src={BunnyTeaLogo} alt = "Bunny Logo"/>
+               </NavLogo>
+               <NavTitle to = "/" onClick={toggleHome}>
+                   <img src={BunnyTeaTitle} alt="Bunny Title" />
+                   </NavTitle>
+               <MobileIcon 
+                style={{color: 'black'}} 
+                onClick = {toggle}/>
                 <NavMenu>
-                    <NavItem>
+                    {/* <NavItem>
                         <NavLinks 
-                        to='about'
+                        to='home'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
-                        offset={-71}
-                        >About</NavLinks>
+                        offset={-70}
+                        >HOME</NavLinks>
+                    </NavItem> */}
+                    <NavItem>
+                        <NavLinks to='menu'
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true'
+                        offset={-70}
+                        >MENU</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to='location'
@@ -148,8 +165,8 @@ const NavBar = ({toggle}) => {
                         duration={500} 
                         spy={true} 
                         exact='true'
-                        offset={-71}
-                        >Location</NavLinks>
+                        // offset={-71}
+                        >LOCATION</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to='contact'
@@ -157,14 +174,14 @@ const NavBar = ({toggle}) => {
                         duration={500} 
                         spy={true} 
                         exact='true'
-                        offset={-70}
-                        >Contact</NavLinks>
+                        // offset={-70}
+                        >CONTACT</NavLinks>
                     </NavItem>
                 </NavMenu>
 
-                <NavBtn>
+                {/* <NavBtn>
                     <NavBtnLink to="menu">Menu</NavBtnLink>
-                </NavBtn>
+                </NavBtn> */}
                
            </NavBarContainer>
         </Nav>
