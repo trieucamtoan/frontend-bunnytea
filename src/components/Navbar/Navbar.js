@@ -147,11 +147,12 @@ const NavBar = ({toggle}) => {
                     <NavLogo to ="/" onClick={toggleHome}>
                             <img 
                             src={BunnyTeaLogo}
+                            // style={{width: '60px'}}
                             alt = "Bunny Logo"/>
                         </NavLogo>
                         <NavTitle to = "/" onClick={toggleHome}>
                                 <img src={BunnyTeaTitle} 
-                                style={{width: '250px', height: '80px'}}
+                                // style={{width: '400px', height: '80px'}}
                                 alt="Bunny Title" />
                         </NavTitle>
                     </NavLogoTitleWrapper>
