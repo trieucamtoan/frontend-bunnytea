@@ -8,20 +8,25 @@ import {IconContext} from 'react-icons/lib'
 // import { Button } from './Button'
 // import {GiHamburgerMenu} from 'react-icons/gi'
 import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
+import BunnyTeaLogoTitle from '../../img/bunny-tea-logo-title.png'
 import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
-
+import { Modal } from '../Modal/Modal';
+import {FaCaretDown} from 'react-icons/fa';
+import DropDown from '../DropDown/DropDown';
 import {
     Nav, 
     NavBarContainer, 
+    NavLogoTitleWrapper,
     NavLogo, 
     NavTitle,
     MobileIcon, 
     NavMenu,
     NavItem, 
-    NavLinks,
+    NavLink,
     NavBtn,
     NavBtnLink,
 } from './NavbarElements';
+import { GlobalStyle } from '../globalStyles';
 
 // const Nav = styled.nav`
 //     height: 70px;
@@ -97,6 +102,27 @@ import {
 
 const NavBar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    } 
+
+    const [dropDown, setDropDown] = useState(false)
+
+    const onMouseEnter = () => {
+        setDropDown(true)
+    }
+
+    const onMouseLeave = () => {
+        setDropDown(false)
+    }
+
+    const onClick = () => {
+        setDropDown(!dropDown)
+    }
+
+
     const changeNav = () => {
         if (window.scrollY >= 70){
             setScrollNav(true)
@@ -116,74 +142,83 @@ const NavBar = ({toggle}) => {
     return (
         <IconContext.Provider value={{color: '#fff'}}>
         <Nav scrollNav = {scrollNav}>
-            {/* <CompanyLogo/>
-            <MenuBar />
-            <NavMenu>
-                {menuData.map((item, index) => (
-                    <NavMenuLink to={item.link} key={index}>
-                        {item.title}
-                    </NavMenuLink>
-                ))}
-            </NavMenu>
-           <NavBtn>
-               <Button to = "/contact" primary = 'true'>Contact Us</Button>
-           </NavBtn> */}
+            <NavBarContainer>
+                <NavLogoTitleWrapper>
+                    <NavLogo to ="/" onClick={toggleHome}>
+                            <img 
+                            src={BunnyTeaLogo}
+                            alt = "Bunny Logo"/>
+                        </NavLogo>
+                        <NavTitle to = "/" onClick={toggleHome}>
+                                <img src={BunnyTeaTitle} alt="Bunny Title" />
+                        </NavTitle>
+                    </NavLogoTitleWrapper>
 
-           <NavBarContainer>
-               <NavLogo to ="/" onClick={toggleHome}>
-                   <img src={BunnyTeaLogo} alt = "Bunny Logo"/>
-               </NavLogo>
-               <NavTitle to = "/" onClick={toggleHome}>
-                   <img src={BunnyTeaTitle} alt="Bunny Title" />
-                   </NavTitle>
-               <MobileIcon 
-                style={{color: 'black'}} 
-                onClick = {toggle}/>
+                    
                 <NavMenu>
+                    <NavItem 
+                    onClick={onClick}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    >
+                        <NavBtn>
+                            <NavBtnLink>
+                                    Order Now
+                                    <FaCaretDown style={{paddingLeft: '5px'}}/>
+                                    
+                            </NavBtnLink>
+                                    {/* <Modal showModal={showModal} setShowModal={setShowModal}/> */}
+                                {dropDown && <DropDown/>} 
+                        </NavBtn>
+                        
+                    </NavItem>
+                    
+                    <MobileIcon 
+                            style={{color: 'black'}} 
+                            onClick = {toggle}
+                        /> 
                     {/* <NavItem>
-                        <NavLinks 
-                        to='home'
+                        <NavLink to='menu'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
                         offset={-70}
-                        >HOME</NavLinks>
-                    </NavItem> */}
-                    <NavItem>
-                        <NavLinks to='menu'
-                        smooth={true} 
-                        duration={500} 
-                        spy={true} 
-                        exact='true'
-                        offset={-70}
-                        >MENU</NavLinks>
+                        >MENU</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='location'
+                        <NavLink to='location'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
                         // offset={-71}
-                        >LOCATION</NavLinks>
+                        >LOCATION</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='contact'
+                        <NavLink to='contact'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
                         // offset={-70}
-                        >CONTACT</NavLinks>
-                    </NavItem>
+                        >CONTACT</NavLink>
+                    </NavItem> */}
+                    
+                        {/* <NavBtn >
+                            
+                                    
+                            </NavItem>
+                        </NavBtn> */}
+                    
                 </NavMenu>
-
-                {/* <NavBtn>
-                    <NavBtnLink to="menu">Menu</NavBtnLink>
-                </NavBtn> */}
-               
+                
+                
+            
+            
            </NavBarContainer>
+           
+           
         </Nav>
         </IconContext.Provider>
     )

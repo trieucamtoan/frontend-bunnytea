@@ -1,42 +1,51 @@
 import React from 'react';
-import SignatureDrinks from '../../img/signature.jpeg';
 import {
     MenuSectionContainer,
     MenuSectionWrapper,
+    MenuSectionTitle,
+    HorizontalLineTop,
+    HorizontalLineBottom,
+    DrinkCard,
+    EmptyDrinkCard,
+    DrinkHeading,
+    DrinkImg,
+    DrinkInfo,
+    DrinkTitle,
+    DrinksWrapper,
     MenuSectionRow,
     Column1,
     Column2,
     Column3,
+    Column4,
     TextWrapper,
     ImgWrap,
-    Img
+    Img,
+    DrinksCollection,
+    DrinkDesc
 } from './DrinksElements'
 
-const DrinksSection = () => {
+const DrinksSection = ({heading, data = []}) => {
     return (
-        <> 
             <MenuSectionContainer>
                 <MenuSectionWrapper>
-                    <p style={{color: 'black'}}>Top Drinks</p>
-                    <MenuSectionRow>
-                        <Column1>
-                            <ImgWrap>
-                            <Img src={SignatureDrinks} alt="Signature"/>
-                            </ImgWrap>
-                            <TextWrapper>
-                                <p>Signature Milk Tea</p>
-                            </TextWrapper>
-                        </Column1>
-                        <Column2>
-
-                        </Column2>
-                        <Column3>
-
-                        </Column3>
-                    </MenuSectionRow>
+                    <MenuSectionTitle>{heading}</MenuSectionTitle>
+                    <HorizontalLineBottom/>
+                    <DrinksWrapper>
+                        {data.map((product, index) => {
+                            return (
+                                <DrinkCard key={index}>
+                                    <DrinkImg src={product.img} alt={product.alt}/>
+                                    <DrinkInfo>
+                                        <DrinkTitle>{product.name}</DrinkTitle>
+                                        <DrinkDesc>{product.desc}</DrinkDesc>
+                                    </DrinkInfo>
+                                </DrinkCard>
+                            )
+                        })
+                        }
+                    </DrinksWrapper>
                 </MenuSectionWrapper>
             </MenuSectionContainer>
-        </>
     )
 }
 

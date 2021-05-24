@@ -1,17 +1,42 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import {Link as LinkRouter} from 'react-router-dom'
+
 
 export const FooterContainer = styled.footer`
     background-color: #101522;
+`
+
+export const FooterLogoTitleWrapper = styled.div`
+    display: flex;
+`
+
+export const FooterLogo = styled(LinkRouter)`
+    margin: 10px 0 0 4vw;
+    justify-content: center;
+    width: 60px;
+    color: #fff;
+    cursor: pointer;
+`
+
+export const FooterTitle = styled(LinkRouter)`
+    display: flex;
+    justify-self: flex-start;
+    padding-left: 40px;
+    cursor: pointer;
+    width: 250px;
+    height: 80px;
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 `
 
 export const FooterWrap = styled.div`
     padding: 48px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 `
 
@@ -54,7 +79,7 @@ export const FooterLinkTitle = styled.h1`
     margin-bottom: 16px;
 `
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled(LinkRouter)`
     color: #fff;
     text-decoration: none;
     margin-bottom: 0.5rem;
@@ -82,7 +107,7 @@ export const SocialMediaWrap = styled.div`
     }
 `
 
-export const SocialLogo = styled(Link)`
+export const SocialLogo = styled(LinkRouter)`
     color: #fff;
     justify-self: start;
     cursor: pointer;

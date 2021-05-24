@@ -1,6 +1,9 @@
 import React from 'react'
 import {
     FooterContainer,
+    FooterLogoTitleWrapper,
+    FooterLogo,
+    FooterTitle,
     FooterWrap,
     FooterLinksContainer,
     FooterLinksWrapper,
@@ -18,6 +21,9 @@ import {
     FaFacebook, FaInstagram, FaYoutube
 } from 'react-icons/fa'
 
+import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
+import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
+
 import {animateScroll as scroll} from 'react-scroll'
 
 const Footer = () => {
@@ -30,6 +36,17 @@ const Footer = () => {
         <FooterContainer>
             <FooterWrap>
                 <FooterLinksContainer>
+
+                <FooterLogoTitleWrapper>
+                    <FooterLogo to ="/" onClick={toggleHome}>
+                            <img 
+                            src={BunnyTeaLogo}
+                            alt = "Bunny Logo"/>
+                        </FooterLogo>
+                        <FooterTitle to = "/" onClick={toggleHome}>
+                                <img src={BunnyTeaTitle} alt="Bunny Title" />
+                        </FooterTitle>
+                    </FooterLogoTitleWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
                             <FooterLinkTitle>About Us</FooterLinkTitle>
