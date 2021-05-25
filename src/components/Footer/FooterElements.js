@@ -102,6 +102,7 @@ export const FooterLogoTitleWrapper = styled.div`
     justify-content: start;
     padding-left: 30px;
     padding-right: 30px;
+    width: 100vw;
 
     @media screen and (max-width: 600px) {
         flex-direction: column;

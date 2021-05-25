@@ -26,7 +26,7 @@ const Home = () => {
     }
 
     return (
-        <>
+        <div>
             <SideBar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle = {toggle}/>
             <DrinksSection id ='topDrinks' heading="TOP DRINKS" data={topDrinks}/>
@@ -40,7 +40,7 @@ const Home = () => {
             <LocationSection id = 'location' {...LaQuinta}/>
             {/* <InfoSection {...locationInfo}/> */}
             <Footer id = 'contact'/>
-        </>
+        </div>
     )
 }
 

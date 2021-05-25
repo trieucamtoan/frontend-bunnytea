@@ -8,7 +8,7 @@ function App() {
   // document.addEventListener('contextmenu', handleRightClick);
   return (
     <Router>
-        <Home/>
+        <Home style={{overflowX: 'hidden'}}/>
     </Router>
   );
 }
