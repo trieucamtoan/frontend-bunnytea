@@ -130,6 +130,7 @@ export const FooterTitle = styled(LinkRouter)`
     
     @media screen and (max-width: 600px) {
         padding-left: 0;
+        width: 200px;
     }
 `
 export const SocialMedia = styled.section`
