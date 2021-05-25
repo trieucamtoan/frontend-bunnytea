@@ -40,10 +40,11 @@ const Footer = ({id}) => {
                         <FooterLogo to ="/" onClick={toggleHome}>
                                     <img 
                                     src={BunnyTeaWhiteLogo}
+                                    style={{width: '60px', height: '60px'}}
                                     alt = "Bunny Logo"/>
                             </FooterLogo>
                         <FooterTitle to = "/" onClick={toggleHome}>
-                                <img src={BunnyTeaWhiteTitle} alt="Bunny Title" />
+                                <img src={BunnyTeaWhiteTitle} style={{width: '300px'}} alt="Bunny Title" />
                         </FooterTitle>
                 </FooterLogoTitleWrapper>
                 <FooterLinksContainer>
@@ -77,8 +78,10 @@ const Footer = ({id}) => {
                             </SocialIcons>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
+
+                    <WebsiteRights>The Bunny Tea © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+
                 </FooterLinksContainer>
-                
                     
             </FooterWrap>
             

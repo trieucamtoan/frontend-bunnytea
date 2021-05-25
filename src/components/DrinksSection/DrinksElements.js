@@ -12,17 +12,21 @@ export const MenuSectionContainer = styled.div`
 export const MenuSectionWrapper = styled.div`
     display: grid;
     z-index: 1;
-    width: 100%;
-    margin: auto 0; 
+    margin: 0; 
+    
 `
 export const MenuSectionTitle = styled.div`
     color: #535353;
-    padding: 10px 0;
+    padding: 30px 0;
     font-family: 'Tauri', sans-serif;
     font-weight: bold;
     font-size: 40px;
     font-style: normal;
     text-align: center;
+
+    @media and screen (max-width: 480px){
+        font-size: 2vw;
+    }
 `
 
 export const HorizontalLineBottom = styled.span`
@@ -51,7 +55,6 @@ export const HorizontalLineTop = styled.span`
 `
 
 export const DrinksWrapper = styled.div`
-    max-width: 100vw;
     margin: 0 auto;
     display: grid;
     grid-gap: 4rem 2rem;
@@ -142,7 +145,6 @@ export const DrinkTitle = styled.h1`
 
 export const MenuSectionRow = styled.div`
     display:grid;
-    width: 100%;
     grid-auto-columns: minmax(auto, 1fr);
     grid-template-areas: 'col1 col2 col3 col4';
 
@@ -224,8 +226,6 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
     border-radius: 27px;
-    width: 100%;
-    height: 100%;
     display: inline-block;
     justify-content:center;
     display: block;
