@@ -126,11 +126,11 @@ export const FooterTitle = styled(LinkRouter)`
     justify-self: flex-start;
     padding-left: 40px;
     cursor: pointer;
-    max-width: 300px;
-    width: 60vw;
-    
+    width: 300px;
+    height: 60px;
     @media screen and (max-width: 600px) {
         padding-left: 0;
+        height: 30px;
     }
 `
 export const SocialMedia = styled.section`
