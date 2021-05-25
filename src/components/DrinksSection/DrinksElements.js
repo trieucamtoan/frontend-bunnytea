@@ -98,7 +98,7 @@ export const DrinkImg = styled.img`
     height: 95vw;
     width: 80vw;
     pointer-events: none;
-    // background-image: url(${props => props.img});
+    -webkit-user-select: none;
     @media (min-width: 768px){
         width: 40vw; 
         height: 45vw;
