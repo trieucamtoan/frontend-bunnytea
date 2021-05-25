@@ -124,7 +124,7 @@ const NavBar = ({toggle}) => {
 
 
     const changeNav = () => {
-        if (window.scrollY >= 70){
+        if (window.scrollY >= 80){
             setScrollNav(true)
         } else {
             setScrollNav(false)
@@ -136,12 +136,12 @@ const NavBar = ({toggle}) => {
     }, [])
 
     const toggleHome = () => {
-        scroll.scrollToTop()
+        scroll.scrollToTop();
     }
 
     return (
         <IconContext.Provider value={{color: '#fff'}}>
-        <Nav scrollNav = {scrollNav}>
+        <Nav scrollNav={scrollNav}>
             <NavBarContainer>
                 <NavLogoTitleWrapper>
                     <NavLogo to ="/" onClick={toggleHome}>
@@ -168,7 +168,6 @@ const NavBar = ({toggle}) => {
                             <NavBtnLink>
                                     Order Now
                                     <FaCaretDown style={{paddingLeft: '5px'}}/>
-                                    
                             </NavBtnLink>
                                     {/* <Modal showModal={showModal} setShowModal={setShowModal}/> */}
                                 {dropDown && <DropDown/>} 
@@ -188,17 +187,17 @@ const NavBar = ({toggle}) => {
                         exact='true'
                         offset={-70}
                         >MENU</NavLink>
-                    </NavItem>
-                    <NavItem>
+                    </NavItem> */}
+                    {/* <NavItem>
                         <NavLink to='location'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
-                        // offset={-71}
+                        offset={-71}
                         >LOCATION</NavLink>
-                    </NavItem>
-                    <NavItem>
+                    </NavItem> */}
+                    {/* <NavItem>
                         <NavLink to='contact'
                         smooth={true} 
                         duration={500} 

@@ -1,18 +1,18 @@
 
-// export const locationInfo = {
-//     id: 'location',
-//     lightBg: true,
-//     lightText: false,
-//     lightTextDescription: false,
-//     topLine: 'Location',
-//     headLine: 'La Quinta',
-//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-//     buttonLabel: 'Get Started',
-//     imgStart: false,
-//     dark: false,
-//     primary: true,
-//     darkText: true
-// };
+export const locationInfo = {
+    id: 'location',
+    lightBg: true,
+    lightText: false,
+    lightTextDescription: false,
+    topLine: 'Location',
+    headLine: 'La Quinta',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    buttonLabel: 'Get Started',
+    imgStart: false,
+    dark: false,
+    primary: true,
+    darkText: true
+};
 
 // export const locationSection = {
 //     id: 'location',

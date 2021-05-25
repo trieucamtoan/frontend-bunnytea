@@ -3,8 +3,6 @@ import styled from 'styled-components'
 //Styling background
 export const MenuSectionContainer = styled.div`
     background-color: #fff;
-    overflow-x: hidden;
-    overflow-y: hidden;
     padding: 25px 0;
     @media and (max-width: 768px){
         padding: 100px 0;
@@ -16,7 +14,6 @@ export const MenuSectionWrapper = styled.div`
     z-index: 1;
     width: 100%;
     margin: auto 0; 
-    overflow-x: hidden;
 `
 export const MenuSectionTitle = styled.div`
     color: #535353;
@@ -97,6 +94,8 @@ export const DrinkCard = styled.div`
 export const DrinkImg = styled.img`
     height: 95vw;
     width: 80vw;
+    pointer-events: none;
+    // background-image: url(${props => props.img});
     @media (min-width: 768px){
         width: 40vw; 
         height: 45vw;

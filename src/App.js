@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import { handleRightClick } from './AppUtility.js';
 
 function App() {
-  document.addEventListener('contextmenu', handleRightClick);
+  // document.addEventListener('contextmenu', handleRightClick);
   return (
     <Router>
         <Home/>

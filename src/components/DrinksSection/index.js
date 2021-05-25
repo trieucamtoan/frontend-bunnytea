@@ -24,9 +24,9 @@ import {
     DrinkDesc
 } from './DrinksElements'
 
-const DrinksSection = ({heading, data = []}) => {
+const DrinksSection = ({id, heading, data = []}) => {
     return (
-            <MenuSectionContainer>
+            <MenuSectionContainer id={id}>
                 <MenuSectionWrapper>
                     <MenuSectionTitle>{heading}</MenuSectionTitle>
                     <HorizontalLineBottom/>

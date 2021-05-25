@@ -12,15 +12,39 @@ import {
 
 const SideBar = ({isOpen, toggle}) => {
     return (
-        <SideBarContainer isOpen = {isOpen} onClick = {toggle}>
+        <SideBarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick = {toggle}>
                 <CloseIcon/>
             </Icon>
             <SideBarWrapper>
                 <SidebarMenu>
-                    <SideBarLink to ="about" onClick = {toggle}> Menu</SideBarLink>
-                    <SideBarLink to ="location" onClick = {toggle}> Location</SideBarLink>
-                    <SideBarLink to ="contact" onClick = {toggle}> Contact</SideBarLink>
+                    <SideBarLink 
+                        to='topDrinks' 
+                        onClick={toggle}
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true'
+                        offset={-80}
+                    > Menu</SideBarLink>
+                    <SideBarLink 
+                        to='location' 
+                        onClick={toggle}
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true'
+                        offset={-80}
+                    > Location</SideBarLink>
+                    <SideBarLink 
+                    to='contact' 
+                    onClick={toggle}
+                    smooth={true} 
+                    duration={500} 
+                    spy={true} 
+                    exact='true'
+                    offset={-80}
+                    > Contact</SideBarLink>
                     {/* <SideBarRoute to = "/menu" onClick = {toggle}>Order</SideBarRoute> */}
                     
                 </SidebarMenu>

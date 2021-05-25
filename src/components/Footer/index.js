@@ -9,6 +9,7 @@ import {
     FooterLinksWrapper,
     FooterLinkItems,
     FooterLinkTitle,
+    FooterCityTitle,
     FooterLink,
     SocialMedia,
     SocialMediaWrap,
@@ -21,92 +22,64 @@ import {
     FaFacebook, FaInstagram, FaYoutube
 } from 'react-icons/fa'
 
-import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
-import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
+import BunnyTeaWhiteLogo from '../../img/bunny-tea-logo-white.svg'
+import BunnyTeaWhiteTitle from '../../img/bunny-tea-title-white.svg'
 
 import {animateScroll as scroll} from 'react-scroll'
 
-const Footer = () => {
+const Footer = ({id}) => {
 
     const toggleHome = () => {
         scroll.scrollToTop()
     };
 
     return (
-        <FooterContainer>
+        <FooterContainer id={id}>
             <FooterWrap>
-                <FooterLinksContainer>
-
                 <FooterLogoTitleWrapper>
-                    <FooterLogo to ="/" onClick={toggleHome}>
-                            <img 
-                            src={BunnyTeaLogo}
-                            alt = "Bunny Logo"/>
-                        </FooterLogo>
+                        <FooterLogo to ="/" onClick={toggleHome}>
+                                    <img 
+                                    src={BunnyTeaWhiteLogo}
+                                    alt = "Bunny Logo"/>
+                            </FooterLogo>
                         <FooterTitle to = "/" onClick={toggleHome}>
-                                <img src={BunnyTeaTitle} alt="Bunny Title" />
+                                <img src={BunnyTeaWhiteTitle} alt="Bunny Title" />
                         </FooterTitle>
-                    </FooterLogoTitleWrapper>
+                </FooterLogoTitleWrapper>
+                <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                            <FooterLink to="/FAQ">How It Works</FooterLink>
-                            <FooterLink to="/FAQ">Testimonials</FooterLink>
-                            <FooterLink to="/FAQ">Careers</FooterLink>
-                            <FooterLink to="/FAQ">Investors</FooterLink>
-                            <FooterLink to="/FAQ">Terms of Services</FooterLink>
+                            <FooterLinkTitle>CONTACT</FooterLinkTitle>
+                            <FooterLink href="mailto:thebunnytea@gmail.com">thebunnytea@gmail.com</FooterLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>LOCATION</FooterLinkTitle>
+                            <FooterCityTitle>La Quinta, CA</FooterCityTitle>
+                            <FooterLink href="https://goo.gl/maps/Ss65xMWHaJGXRbrh7">79680 Highway 111, La Quinta, CA 92253</FooterLink>
                         </FooterLinkItems>
 
                         <FooterLinkItems>
-                            <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                            <FooterLink to="/FAQ">Contact</FooterLink>
-                            <FooterLink to="/FAQ">Support</FooterLink>
-                            <FooterLink to="/FAQ">Destination</FooterLink>
-                            <FooterLink to="/FAQ">Sponsorships</FooterLink>
-                        </FooterLinkItems>
+                            <FooterLinkTitle>FOLLOW</FooterLinkTitle>
+                            <SocialIcons>
+                                <SocialIconLink 
+                                href="https://www.facebook.com/The-Bunny-Tea-104448155160574" 
+                                target = "_blank" 
+                                aria-label="Facebook">
+                                    <FaFacebook/>
+                                </SocialIconLink>
 
-                        <FooterLinkItems>
-                            <FooterLinkTitle>Videos</FooterLinkTitle>
-                            <FooterLink to="/FAQ">Submit Video</FooterLink>
-                            <FooterLink to="/FAQ">Ambassadors</FooterLink>
-                            <FooterLink to="/FAQ">Agency</FooterLink>
-                            <FooterLink to="/FAQ">Influencer</FooterLink>
+                                <SocialIconLink 
+                                href="https://www.instagram.com/bunnyteahouse/" 
+                                target = "_blank" 
+                                aria-label="Instagram">
+                                    <FaInstagram/>
+                                </SocialIconLink>
+                            </SocialIcons>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
-
-                <SocialMedia>
-                    <SocialMediaWrap>
-                        <SocialLogo to='/' onClick ={toggleHome}>
-                            The Bunny Tea
-                        </SocialLogo>
-                        <WebsiteRights>
-                            The Bunny Tea © {new Date().getFullYear()}  All Rights Reserved.
-                        </WebsiteRights>
-                        <SocialIcons>
-                            <SocialIconLink 
-                            href="//www.facebook.com" 
-                            target = "_blank" 
-                            aria-label="Facebook">
-                                <FaFacebook/>
-                            </SocialIconLink>
-
-                            <SocialIconLink 
-                            href="//www.instagram.com" 
-                            target = "_blank" 
-                            aria-label="Instagram">
-                                <FaInstagram/>
-                            </SocialIconLink>
-
-                            <SocialIconLink 
-                            href="//www.youtube.com" 
-                            target = "_blank" 
-                            aria-label="Youtube">
-                                <FaYoutube/>
-                            </SocialIconLink>
-                        </SocialIcons>
-                    </SocialMediaWrap>
-                </SocialMedia>
+                
+                    
             </FooterWrap>
             
         </FooterContainer>
