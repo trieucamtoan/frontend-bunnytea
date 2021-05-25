@@ -27,9 +27,6 @@ body, html{
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  outline: 1px solid red;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
