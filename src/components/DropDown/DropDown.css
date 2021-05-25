@@ -43,11 +43,3 @@
         width: 185px;
     } 
 }
-
-@media screen and (max-width: 290px){
-    .dropdown-menu {
-        margin-right: 0;
-        margin-left: -55vw;
-    } 
-    
-}

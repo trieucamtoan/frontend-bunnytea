@@ -44,7 +44,7 @@ const Footer = ({id}) => {
                                     alt = "Bunny Logo"/>
                             </FooterLogo>
                         <FooterTitle to = "/" onClick={toggleHome}>
-                                <img src={BunnyTeaWhiteTitle} style={{width: '300px'}} alt="Bunny Title" />
+                                <img src={BunnyTeaWhiteTitle} style={{width: '200px'}} alt="Bunny Title" />
                         </FooterTitle>
                 </FooterLogoTitleWrapper>
                 <FooterLinksContainer>
