@@ -32,19 +32,24 @@ import StrawberryMilkTea from '../../img/drinks/MilkTea/StrawberryMilkTea.jpg';
 import MangoMilkTea from '../../img/drinks/MilkTea/MangoMilkTea.jpg';
 import MatchaLoverMilkTea from '../../img/drinks/MilkTea/MatchaLoverMilkTea.jpg';
 import PremiumJasmineGreenMilkTea from '../../img/drinks/MilkTea/PremiumJasmineGreenMilkTea.jpg';
+// import HoneydewMilkTea from '../../img/drinks/MilkTea/HoneydewMilkTea.jpg';
 
 //Fresh Milk Drinks
 import CremeBrulee from '../../img/drinks/FreshMilkDrinks/CremeBrulee.jpg';
+import OreoCremeBrulee from '../../img/drinks/FreshMilkDrinks/OreoCremeBrulee.jpg';
 import StrawberryMatchaFreshMilk from '../../img/drinks/FreshMilkDrinks/StrawberryMatchaFreshMilk.jpg';
 import StrawberryFreshMilk from '../../img/drinks/FreshMilkDrinks/StrawberryFreshMilk.jpg';
 import MangoMatchaFreshMilk from '../../img/drinks/FreshMilkDrinks/MangoMatchaFreshMilk.jpg';
 import MangoFreshMilk from '../../img/drinks/FreshMilkDrinks/MangoFreshMilk.jpg';
 import ThaiTeaLatte from '../../img/drinks/FreshMilkDrinks/ThaiTeaLatte.jpg';
+import PeachFreshMilk from '../../img/drinks/FreshMilkDrinks/PeachFreshMilk.JPG';
 
 //Tea Slushy
-import ThaiTango from '../../img/drinks/TeaSlushy/ThaiTango.jpg';
+import ThaiCloudy from '../../img/drinks/TeaSlushy/ThaiCloudy.jpg';
 import MangoSnowy from '../../img/drinks/TeaSlushy/MangoSnowy.jpg';
 import PeachSnowy from '../../img/drinks/TeaSlushy/PeachSnowy.jpg';
+import PineappleTeaSlushy from '../../img/drinks/TeaSlushy/PineappleTeaSlushy.JPG';
+
 import PassionIsland from '../../img/drinks/TeaSlushy/PassionIsland.jpg';
 
 
@@ -55,6 +60,11 @@ import WatermelonChamoy from '../../img/drinks/Smoothies/WatermelonChamoy.jpg';
 import StrawberryBanana from '../../img/drinks/Smoothies/StrawberryBanana.jpg';
 import AdvocadoCoffee from '../../img/drinks/Smoothies/AdvocadoCoffee.jpg';
 import ChocoMint from '../../img/drinks/Smoothies/ChocoMint.jpg';
+import HoneydewSmoothie from '../../img/drinks/Smoothies/HoneydewSmoothie.jpg';
+import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlush.JPG';
+import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie.JPG';
+import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie.JPG';
+
 
 //Coffee
 import VietnameseCoffee from '../../img/drinks/Coffee/VietnameseCoffee.jpg';
@@ -62,13 +72,16 @@ import TiramisuCoffee from '../../img/drinks/Coffee/TiramisuCoffee.jpg';
 import BananaCoffee from '../../img/drinks/Coffee/BananaCoffee.jpg';
 import MochaCoffee from '../../img/drinks/Coffee/MochaCoffee.jpg';
 import HokkaidoCoffee from '../../img/drinks/Coffee/HokkaidoCoffee.jpg';
+import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.JPG';
+// import CoconutCoffee from '../../img/drinks/Coffee/CoconutCoffee.jpg';
 
 export const topDrinks = [
     {
         img: SignatureDrink,
         alt: "Signature Milk Tea",
         name: "Signature Milk Tea",
-        desc: "With Cheese Pudding"
+        desc: "With Cheese Pudding",
+        modalDesc: "Recommended with Cheese Cream Foam/ Oreo"
     },
     {
         img: PremiumJasmineMilkTea,
@@ -81,14 +94,16 @@ export const topDrinks = [
         img: GoldenMilkTea,
         alt: "Golden Milk Tea",
         name: "Golden Milk Tea",
-        desc: "With Tiramisu"
+        desc: "With Tiramisu",
+        modalDesc: "Recommended with Tiramisu Foam/ Oreo"
     },
 
     {
         img: TaroMilkTea,
         alt: "Taro Milk Tea",
         name: "Taro Milk Tea",
-        desc: "With Cheese Cream"
+        desc: "With Cheese Cream",
+        modalDisc: "Recommended with Cheese Cream Foam"
     },
     {
         img: BoboLatte,
@@ -185,6 +200,11 @@ export const freshFruitDrinks = [
         img: CoupleMelon,
         alt: "Couple Melon",
         name: "Couple Melon"
+    },
+    {
+        img: PeachFreshMilk,
+        alt: "Peach Fresh Milk",
+        name: "Peach Fresh Milk"
     }
 ]
 
@@ -193,45 +213,55 @@ export const milkTea = [
         img: SignatureDrink,
         alt: "Signature Milk Tea",
         name: "Signature Milk Tea",
-        desc: "With Cheese Pudding"
+        desc: "With Cheese Pudding",
+        modalDesc: "Recommended with Cheese Cream Foam/ Oreo"
     },
     {
         img: GoldenMilkTea,
         alt: "Golden Milk Tea",
         name: "Golden Milk Tea",
-        desc: "With Tiramisu"
+        desc: "With Tiramisu",
+        modalDesc: "Recommended with Tiramisu Foam/ Oreo"
     },
-
+    {
+        img: PremiumJasmineGreenMilkTea,
+        alt: "Premium Jasmine Green",
+        name: "Premium Jasmine Green"
+    },
     {
         img: TaroMilkTea,
         alt: "Taro Milk Tea",
         name: "Taro Milk Tea",
-        desc: "With Cheese Cream"
+        desc: "With Cheese Cream",
+        modalDesc: "Recommended with Cheese Cream Foam"
     },
 
     {
         img: BrownSugarMilkTea,
         alt: "Brown Sugar Milk Tea",
         name: "Brown Sugar Milk Tea",
-        desc: ""
+        desc: "",
+        modalDesc: "Recommended with Coffee Jelly/ Oreo"
     },
     {
         img: ChocolateMilkTea,
         alt: "Chocolate Milk Tea",
         name: "Chocolate Milk Tea",
-        desc: ""
+        desc: "",
+        modalDesc: "Recommended with Tiramisu Foam/ Oreo"
     },
     {
         img: HokkaidoBlackMilkTea,
         alt: "Hokkaido Black Milk Tea",
         name: "Hokkaido Black Milk Tea",
-        desc: "With Cheese Cream"
+        desc: "With Cheese Cream",
+        
     },
-    {
-        img: OolongMilkTea,
-        alt: "Oolong Milk Tea",
-        name: "Oolong Milk Tea"
-    },
+    // {
+    //     img: HoneydewMilkTea,
+    //     alt: "HoneydewMilkTea",
+    //     name: "HoneydewMilkTea"
+    // },
     {
         img: HazelnutMilkTea,
         alt: "Hazelnut Milk Tea",
@@ -260,12 +290,8 @@ export const milkTea = [
     {
         img: MatchaLoverMilkTea,
         alt: "Matcha Lover",
-        name: "Matcha Lover"
-    },
-    {
-        img: PremiumJasmineGreenMilkTea,
-        alt: "Premium Jasmine Green",
-        name: "Premium Jasmine Green"
+        name: "Matcha Lover",
+        modalDesc: "Mix with Premium Matcha from Japan"
     }
 ]
 
@@ -278,8 +304,14 @@ export const freshMilkDrinks = [
     },
     {
         img: CremeBrulee,
-        alt: "Creme Brûlée (Oreo CrèmeBrûlée Fresh Milk)",
-        name: "Creme Brûlée (Oreo CrèmeBrûlée Fresh Milk)",
+        alt: "Creme Brûlée",
+        name: "Creme Brûlée",
+        desc: ""
+    },
+    {
+        img: OreoCremeBrulee,
+        alt: "Oreo CrèmeBrûlée Fresh Milk",
+        name: "Oreo CrèmeBrûlée Fresh Milk",
         desc: ""
     },
 
@@ -341,11 +373,24 @@ export const teaSlushy = [
     },
 
     {
-        img: ThaiTango,
-        alt: "Thai Tango (Thai Tea Slush)",
-        name: "Thai Tango (Thai Tea Slush)",
+        img: ThaiCloudy,
+        alt: "Thai Cloudy (Thai Tea Slush)",
+        name: "Thai Cloudy (Thai Tea Slush)",
         desc: ""
-    }
+    },
+    {
+        img: PineappleTeaSlushy,
+        alt: "Pinapple Tea Slushy",
+        name: "Pinapple Tea Slushy",
+        desc: ""
+    },
+    
+    {
+        img: CoconutCoffeeSmoothie,
+        alt: "Coconut Coffee Smoothie",
+        name: "Coconut Coffee Smoothie",
+        desc: ""
+    },
 ]
 
 export const smoothies = [
@@ -398,7 +443,31 @@ export const smoothies = [
         img: IcyFlan,
         alt: "Icy Flan",
         name: "Icy Flan"
-    }
+    },
+    // {
+    //     img: PinaAloha,
+    //     alt: "Pina Aloha",
+    //     name: "Pina Aloha",
+    //     desc: ""
+    // },
+    {
+        img: StrawberryLemonadeSlush,
+        alt: "Strawberry Lemonade Slushy",
+        name: "Strawberry Lemonade Slushy",
+        desc: ""
+    },
+    {
+        img: HoneydewSmoothie,
+        alt: "Honeydew Smoothie",
+        name: "Honeydew Smoothie",
+        desc: ""
+    },
+    {
+        img: MatchaSmoothie,
+        alt: "Matcha Smoothie",
+        name: "Matcha Smoothie",
+        desc: ""
+    },
 ]
 
 export const coffee = [
@@ -431,5 +500,17 @@ export const coffee = [
         img: HokkaidoCoffee,
         alt: "Hokkaido / Hazelnut / Vanilla Coffee",
         name: "Hokkaido / Hazelnut / Vanilla Coffee"
+    },
+    // {
+    //     img: CoconutCoffee,
+    //     alt: "Coconut Coffee",
+    //     name: "Coconut Coffee",
+    //     desc: ""
+    // },
+    {
+        img: BrownSugarCoffee,
+        alt: "Brown Sugar Coffee",
+        name: "Brown Sugar Coffee",
+        desc: ""
     }
 ]

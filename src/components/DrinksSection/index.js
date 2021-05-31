@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Modal} from '../Modal/Modal';
 import {
     MenuSectionContainer,
     MenuSectionWrapper,
@@ -25,6 +26,15 @@ import {
 } from './DrinksElements'
 
 const DrinksSection = ({id, heading, data = []}) => {
+    const [showModal, setShowModal] = useState(false)
+    const [currentProduct, setCurrentProduct] = useState({})
+    
+    const openModal = (product) => {
+        console.log(product)
+        setCurrentProduct(product)
+        setShowModal(!showModal)
+    } 
+
     return (
             <MenuSectionContainer id={id}>
                 <MenuSectionWrapper>
@@ -33,16 +43,24 @@ const DrinksSection = ({id, heading, data = []}) => {
                     <DrinksWrapper>
                         {data.map((product, index) => {
                             return (
-                                <DrinkCard key={index}>
-                                    <DrinkImg src={product.img} alt={product.alt}/>
-                                    <DrinkInfo>
-                                        <DrinkTitle>{product.name}</DrinkTitle>
-                                        <DrinkDesc>{product.desc}</DrinkDesc>
-                                    </DrinkInfo>
-                                </DrinkCard>
+                                <>
+                                    <DrinkCard key={index} onClick={() => openModal(product)}>
+                                        <DrinkImg src={product.img} alt={product.alt}/>
+                                        <DrinkInfo>
+                                            <DrinkTitle>{product.name}</DrinkTitle>
+                                            <DrinkDesc>{product.desc}</DrinkDesc>
+                                        </DrinkInfo>
+                                    </DrinkCard>
+                                    
+                                </>
                             )
                         })
                         }
+                    <Modal
+                        showModal={showModal} 
+                        setShowModal={openModal}
+                        product={currentProduct}
+                    />
                     </DrinksWrapper>
                 </MenuSectionWrapper>
             </MenuSectionContainer>

@@ -1,39 +1,46 @@
-import React, {useState} from 'react'
+import React, {useRef, useEffect, useCallBack, useState} from 'react'
+import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
+import { IconContext } from 'react-icons/lib'
 
 const Background = styled.div`
     top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
+    z-index: 11;
+    background: rgba(0,0,0,0.8);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 `
 
 const ModalWrapper = styled.div`
-    width: 50%;
-    height: auto;
-    box-shadow: 0 5px 16px rgba (0,0,0,0.2);
+    display: flex;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    // outline: 1px solid red;
+    // padding: 5vw;
+    // outline: 1px solid yellow;
+    box-shadow: 0 5px 16px rgba (0,0,0,0.8);
     background: #fff;
     color: #000;
-    display: grid;
-    // grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 10;
-    border-radius: 10px;
 `
 
 const ModalContent = styled.div`
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 5%;
+    margin-bottom: 40px;
     align-items: center;
-    line-height: 1.8;
     color: #141414;
 
     p {
@@ -46,47 +53,122 @@ const ModalContent = styled.div`
         color: #fff;
         border: none;
     }
+
+    
+`
+
+const HorizontalLineBottom = styled.span`
+    border: none; 
+    border-bottom: 3px solid gainsboro;
+    margin-bottom: 50px;
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1628px){
+        width: 90vw;
+    }
+`
+const ModalImgWrapper = styled.div`
+    display: flex;
+    margin-bottom: 5%;
+    width: auto;
+    height: 70%;
+`
+const ModalImg = styled.img`
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 20px 20px 0 0;
+    // pointer-events: none;
+    // // outline: 1px solid red;
+    // -webkit-user-select: none;
+    
+
+    @media (max-width: 550px){
+        width: 70vw; 
+        height: 75vw;
+    }
+
+    // @media (min-width: 1000px){
+    //     width: 30vw; 
+    //     height: 35vw;
+    // }
+
+    // @media (min-width: 1620px){
+    //     width: 30vw; 
+    //     height: 35vw;
+    }
+`
+const ModalTitle = styled.h1`
+    color: black;
+    font-family: 'Raleway', san-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 368px){
+        font-weight: 600;
+    }
+`
+
+const ModalDescription = styled.div`
+    color: black;
+    font-family: 'Raleway', san-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    // text-transform: uppercase;
+`
+const CloseModalButtonWrapper = styled.div`
+    position: absolute;
+    top: 1.2rem;
+    right: 2.0rem;
+    background: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+    outline: none;
 `
 
 const CloseModalButton = styled(MdClose)`
-    color: rgb(0, 0, 0) !important;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    z-index: 10;
+    
 `
 
-export const Modal = ({showModal, setShowModal}) => {
+export const Modal = ({showModal, setShowModal, product}) => {
+    const modalRef = useRef()
+
+    const animation = useSpring({
+        config: {
+            duration: 250
+        },
+        opacity: showModal ? 1 : 0,
+        transform: showModal ? 'translateY(0%)' : 'translateY(-100%)'
+    })
     return (
         <>
         {showModal ? 
             <Background>
+                <animated.div style={animation}>
                 <ModalWrapper showModal={showModal}>
+                    <ModalImgWrapper>
+                        <ModalImg src={product.img} alt={product.alt}/>
+                    </ModalImgWrapper>
+                    
                     <ModalContent>
-                        <a 
-                            href={"https://www.doordash.com/business/274546/?utm_source=partner-link&utm_medium=website&utm_campaign=274546&utm_content=white-m"}
-                            target="_blank" 
-                            alt="Order Food Delivery with DoorDash" 
-                            title="Order Food Delivery with DoorDash" 
-                            style={{textDecoration: "none"}}>
-                                <div style={{
-                                    position:"relative",
-                                    width:"209px",
-                                    height:"45px",
-                                    margin:"0px auto",
-                                    backgroundImage:"url(https://cdn.doordash.com/media/button/button_white_m.svg)",
-                                    color:"transparent"
-                                }}>
-                                    Order Food Delivery with DoorDash
-                                </div>
-                        </a>
+                        <ModalTitle>{product.name}</ModalTitle>
+                        {/* <div>{product.name}</div>
+                        <div>{product.modalDesc}</div> */}
+                        <ModalDescription>{product.desc}</ModalDescription>
+                        <ModalDescription>{product.modalDesc}</ModalDescription>
+                        
                     </ModalContent>
-                    <CloseModalButton aria-label='Close Modal' onClick={() => setShowModal(prev => !prev)}/>
+
+                    <CloseModalButtonWrapper aria-label='Close Modal' onClick={() => setShowModal(prev => !prev)}>
+                        <CloseModalButton/>
+                    </CloseModalButtonWrapper>
                 </ModalWrapper>
+                </animated.div>
             </Background>
         : null
         }
