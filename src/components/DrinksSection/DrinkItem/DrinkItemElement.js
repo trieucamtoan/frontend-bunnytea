@@ -107,13 +107,8 @@ export const Button = styled(Link)`
 export const ImgWrapper = styled.div`
     // outline: 1px solid red;
     display: flex;
-    flex-basis: 300px;
     justify-content: center;
     order: 2;
-
-    @media (max-width: 480px){
-        flex-basis: 250px;
-    }
 `
 export const Img = styled.img`
     object-fit: cover;
