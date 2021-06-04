@@ -62,8 +62,8 @@ import AdvocadoCoffee from '../../img/drinks/Smoothies/AdvocadoCoffee.jpg';
 import ChocoMint from '../../img/drinks/Smoothies/ChocoMint.jpg';
 import HoneydewSmoothie from '../../img/drinks/Smoothies/HoneydewSmoothie.jpg';
 import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlush.jpg';
-import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie.jpg';
-import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie.jpg';
+import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie_copy.jpg';
+import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie_copy.jpg';
 
 
 //Coffee
@@ -72,7 +72,7 @@ import TiramisuCoffee from '../../img/drinks/Coffee/TiramisuCoffee.jpg';
 import BananaCoffee from '../../img/drinks/Coffee/BananaCoffee.jpg';
 import MochaCoffee from '../../img/drinks/Coffee/MochaCoffee.jpg';
 import HokkaidoCoffee from '../../img/drinks/Coffee/HokkaidoCoffee.jpg';
-import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.jpg';
+import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee_copy.jpg';
 // import CoconutCoffee from '../../img/drinks/Coffee/CoconutCoffee.jpg';
 
 export const topDrinks = [
