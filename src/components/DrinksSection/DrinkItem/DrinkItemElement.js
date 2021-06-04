@@ -118,8 +118,8 @@ export const ImgWrapper = styled.div`
 export const Img = styled.img`
     object-fit: cover;
     // flex-shrink: 0;
-    width: 500px;
-    height: 500px;
+    width: 65vw;
+    height: 65vw;
     
     // pointer-events: none;
     // // outline: 1px solid red;
