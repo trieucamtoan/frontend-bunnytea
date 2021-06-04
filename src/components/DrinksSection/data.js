@@ -48,7 +48,7 @@ import PeachFreshMilk from '../../img/drinks/FreshMilkDrinks/PeachFreshMilk_copy
 import ThaiCloudy from '../../img/drinks/TeaSlushy/ThaiCloudy.jpg';
 import MangoSnowy from '../../img/drinks/TeaSlushy/MangoSnowy.jpg';
 import PeachSnowy from '../../img/drinks/TeaSlushy/PeachSnowy.jpg';
-import PineappleTeaSlushy from '../../img/drinks/TeaSlushy/PineappleTeaSlushy.jpg';
+import PineappleTeaSlushy from '../../img/drinks/TeaSlushy/PineappleTeaSlushy_copy.jpg';
 
 import PassionIsland from '../../img/drinks/TeaSlushy/PassionIsland.jpg';
 
