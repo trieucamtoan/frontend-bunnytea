@@ -119,6 +119,7 @@ export const Img = styled.img`
     object-fit: cover;
     // flex-shrink: 0;
     width: 500px;
+    height: 500px;
     
     // pointer-events: none;
     // // outline: 1px solid red;
@@ -127,6 +128,7 @@ export const Img = styled.img`
 
     @media (max-width: 768px){
         width: 80vw;
+        height: 80vw;
     }
 
     // @media (min-width: 1000px){
