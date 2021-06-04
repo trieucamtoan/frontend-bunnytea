@@ -61,7 +61,7 @@ import StrawberryBanana from '../../img/drinks/Smoothies/StrawberryBanana.jpg';
 import AdvocadoCoffee from '../../img/drinks/Smoothies/AdvocadoCoffee.jpg';
 import ChocoMint from '../../img/drinks/Smoothies/ChocoMint.jpg';
 import HoneydewSmoothie from '../../img/drinks/Smoothies/HoneydewSmoothie.jpg';
-import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlush.jpg';
+import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlushy.jpg';
 import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie.jpg';
 import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie.jpg';
 
