@@ -20,29 +20,35 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
     display: flex;
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    // outline: 1px solid red;
+    // border-radius: 20px;
+    width: 100vw;
+    height: 100vh;
     // padding: 5vw;
     // outline: 1px solid yellow;
-    box-shadow: 0 5px 16px rgba (0,0,0,0.8);
+    // box-shadow: 0 5px 16px rgba (0,0,0,0.8);
     background: #fff;
     color: #000;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
     justify-content: center;
     position: relative;
     z-index: 10;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
 `
 
 const ModalContent = styled.div`
-    padding: 5%;
-    margin-bottom: 40px;
-    align-items: center;
     color: #141414;
-
+    flex-basis: 50%;
+    order: 2;
+    width: 80%;
+    height: 80vh;
+    outline: 1px solid blue;
+    align-items: flex-end;
+    max-width: 600px;
     p {
         margin-bottom: 1rem;
     }
@@ -55,6 +61,12 @@ const ModalContent = styled.div`
     }
 
     
+`
+
+const ModalContentWrapper = styled.div`
+    outline: 1px solid blue;
+    margin: 10vh auto;
+    height: 60%;
 `
 
 const HorizontalLineBottom = styled.span`
@@ -70,16 +82,19 @@ const HorizontalLineBottom = styled.span`
     }
 `
 const ModalImgWrapper = styled.div`
+    outline: 1px solid red;
     display: flex;
-    margin-bottom: 5%;
-    width: auto;
-    height: 70%;
+    margin: 30px;
+    flex-basis: 40%;
+    justify-content: center;
+    order: 1;
+    height: 80vh;
 `
 const ModalImg = styled.img`
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    // flex-shrink: 0;
+    width: 80%;
+    
     // pointer-events: none;
     // // outline: 1px solid red;
     // -webkit-user-select: none;
@@ -103,7 +118,21 @@ const ModalImg = styled.img`
 const ModalTitle = styled.h1`
     color: black;
     font-family: 'Raleway', san-serif;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 368px){
+        font-weight: 600;
+    }
+`
+
+const ModalDescriptionTitle = styled.h1`
+    color: black;
+    font-family: 'Raleway', san-serif;
+    font-weight: 600;
+    color: grey;
     font-size: 22px;
     text-align: center;
     text-transform: uppercase;
@@ -121,6 +150,27 @@ const ModalDescription = styled.div`
     text-align: center;
     // text-transform: uppercase;
 `
+const GoBackModalButtonWrapper = styled.div`
+    height: 40%;
+`
+const GoBackModalButton = styled.div`
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: black;
+    align-items: center;    
+    font-family: 'Raleway', san-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: 80px;
+    
+`
+
 const CloseModalButtonWrapper = styled.div`
     position: absolute;
     top: 1.2rem;
@@ -151,18 +201,24 @@ export const Modal = ({showModal, setShowModal, product}) => {
             <Background>
                 <animated.div style={animation}>
                 <ModalWrapper showModal={showModal}>
+                    <ModalContent>
+                        <ModalContentWrapper>
+                            <ModalTitle>{product.name}</ModalTitle>                            
+                            <ModalDescriptionTitle>Description</ModalDescriptionTitle>
+                            {/* <div>{product.name}</div>
+                            <div>{product.modalDesc}</div> */}
+                            <ModalDescription>{product.desc}</ModalDescription>
+                            <ModalDescription>{product.modalDesc}</ModalDescription>
+                        </ModalContentWrapper>
+                        <GoBackModalButtonWrapper>
+                            <GoBackModalButton onClick={() => setShowModal(prev => !prev)}>Go Back</GoBackModalButton>
+                        </GoBackModalButtonWrapper>
+                    </ModalContent>
                     <ModalImgWrapper>
                         <ModalImg src={product.img} alt={product.alt}/>
                     </ModalImgWrapper>
                     
-                    <ModalContent>
-                        <ModalTitle>{product.name}</ModalTitle>
-                        {/* <div>{product.name}</div>
-                        <div>{product.modalDesc}</div> */}
-                        <ModalDescription>{product.desc}</ModalDescription>
-                        <ModalDescription>{product.modalDesc}</ModalDescription>
-                        
-                    </ModalContent>
+                    
 
                     <CloseModalButtonWrapper aria-label='Close Modal' onClick={() => setShowModal(prev => !prev)}>
                         <CloseModalButton/>

@@ -81,6 +81,7 @@ export const DrinksWrapper = styled.div`
 export const DrinkCard = styled.div`
     margin: 0 auto;
     width: 80vw;
+    cursor: pointer;
     @media (min-width: 768px){
         width: 40vw; 
     }
@@ -95,6 +96,7 @@ export const DrinkCard = styled.div`
 
 `
 export const DrinkImg = styled.img`
+    object-fit: cover;
     height: 95vw;
     width: 80vw;
     pointer-events: none;

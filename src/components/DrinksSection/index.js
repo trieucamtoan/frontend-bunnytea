@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Modal} from '../Modal/Modal';
+import {Link} from 'react-router-dom'
 import {
     MenuSectionContainer,
     MenuSectionWrapper,
@@ -30,6 +31,7 @@ const DrinksSection = ({id, heading, data = []}) => {
     const [currentProduct, setCurrentProduct] = useState({})
     
     const openModal = (product) => {
+        //onClick={() => openModal(product)}
         console.log(product)
         setCurrentProduct(product)
         setShowModal(!showModal)
@@ -43,16 +45,19 @@ const DrinksSection = ({id, heading, data = []}) => {
                     <DrinksWrapper>
                         {data.map((product, index) => {
                             return (
-                                <>
-                                    <DrinkCard key={index} onClick={() => openModal(product)}>
+                                <Link to={{
+                                    pathname: '/drinks/' + product.id,
+                                    state: {product: product},
+                                  }} 
+                                    style={{textDecoration: "none"}}>
+                                    <DrinkCard key={index}>
                                         <DrinkImg src={product.img} alt={product.alt}/>
                                         <DrinkInfo>
                                             <DrinkTitle>{product.name}</DrinkTitle>
                                             <DrinkDesc>{product.desc}</DrinkDesc>
                                         </DrinkInfo>
                                     </DrinkCard>
-                                    
-                                </>
+                                </Link>
                             )
                         })
                         }

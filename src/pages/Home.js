@@ -29,11 +29,11 @@ const Home = () => {
         <div>
             <SideBar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle = {toggle}/>
-            <DrinksSection id ='topDrinks' heading="TOP DRINKS" data={topDrinks}/>
-            <DrinksSection id = 'freshFruitDrinks' heading="FRESH FRUIT DRINKS" data={freshFruitDrinks}/>
-            <DrinksSection id = 'milkTea' heading="MILK TEA" data={milkTea}/>
-            <DrinksSection id = 'freshMilkDrinks' heading="FRESH MILK DRINKS" data={freshMilkDrinks}/>
-            <DrinksSection id = 'teaSlushy' heading="TEA SLUSHY" data={teaSlushy}/>
+            <DrinksSection id ='top-drinks' heading="TOP DRINKS" data={topDrinks}/>
+            <DrinksSection id = 'fresh-fruit-drinks' heading="FRESH FRUIT DRINKS" data={freshFruitDrinks}/>
+            <DrinksSection id = 'milk-tea' heading="MILK TEA" data={milkTea}/>
+            <DrinksSection id = 'fresh-milk-drinks' heading="FRESH MILK DRINKS" data={freshMilkDrinks}/>
+            <DrinksSection id = 'tea-slushy' heading="TEA SLUSHY" data={teaSlushy}/>
             <DrinksSection id = 'smoothies' heading="SMOOTHIES" data={smoothies}/>
             <DrinksSection id = 'coffee' heading="COFFEE" data={coffee}/>
             {/* <Services /> */}
