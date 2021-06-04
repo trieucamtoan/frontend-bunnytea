@@ -42,7 +42,7 @@ import StrawberryFreshMilk from '../../img/drinks/FreshMilkDrinks/StrawberryFres
 import MangoMatchaFreshMilk from '../../img/drinks/FreshMilkDrinks/MangoMatchaFreshMilk.jpg';
 import MangoFreshMilk from '../../img/drinks/FreshMilkDrinks/MangoFreshMilk.jpg';
 import ThaiTeaLatte from '../../img/drinks/FreshMilkDrinks/ThaiTeaLatte.jpg';
-import PeachFreshMilk from '../../img/drinks/FreshMilkDrinks/PeachFreshMilk.JPG';
+import PeachFreshMilk from '../../img/drinks/FreshMilkDrinks/PeachFreshMilk_copy.jpg';
 
 //Tea Slushy
 import ThaiCloudy from '../../img/drinks/TeaSlushy/ThaiCloudy.jpg';
@@ -78,6 +78,7 @@ import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.JPG';
 export const topDrinks = [
     {
         id: 0,
+        path: 'signature-drink',
         img: SignatureDrink,
         alt: "Signature Milk Tea",
         name: "Signature Milk Tea",
@@ -221,12 +222,6 @@ export const freshFruitDrinks = [
         img: CoupleMelon,
         alt: "Couple Melon",
         name: "Couple Melon"
-    },
-    {
-        id: 21,
-        img: PeachFreshMilk,
-        alt: "Peach Fresh Milk",
-        name: "Peach Fresh Milk"
     }
 ]
 
@@ -384,6 +379,12 @@ export const freshMilkDrinks = [
         img: ThaiTeaLatte,
         alt: "Thai Tea Latte",
         name: "Thai Tea Latte"
+    },
+    {
+        id: 21,
+        img: PeachFreshMilk,
+        alt: "Peach Fresh Milk",
+        name: "Peach Fresh Milk"
     }
 ]
 
