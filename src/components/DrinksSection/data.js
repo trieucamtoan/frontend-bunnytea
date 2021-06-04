@@ -48,7 +48,7 @@ import PeachFreshMilk from '../../img/drinks/FreshMilkDrinks/PeachFreshMilk_copy
 import ThaiCloudy from '../../img/drinks/TeaSlushy/ThaiCloudy.jpg';
 import MangoSnowy from '../../img/drinks/TeaSlushy/MangoSnowy.jpg';
 import PeachSnowy from '../../img/drinks/TeaSlushy/PeachSnowy.jpg';
-import PineappleTeaSlushy from '../../img/drinks/TeaSlushy/PineappleTeaSlushy.JPG';
+import PineappleTeaSlushy from '../../img/drinks/TeaSlushy/PineappleTeaSlushy.jpg';
 
 import PassionIsland from '../../img/drinks/TeaSlushy/PassionIsland.jpg';
 
@@ -61,9 +61,9 @@ import StrawberryBanana from '../../img/drinks/Smoothies/StrawberryBanana.jpg';
 import AdvocadoCoffee from '../../img/drinks/Smoothies/AdvocadoCoffee.jpg';
 import ChocoMint from '../../img/drinks/Smoothies/ChocoMint.jpg';
 import HoneydewSmoothie from '../../img/drinks/Smoothies/HoneydewSmoothie.jpg';
-import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlush.JPG';
-import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie.JPG';
-import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie.JPG';
+import StrawberryLemonadeSlush from '../../img/drinks/Smoothies/StrawberryLemonadeSlush.jpg';
+import CoconutCoffeeSmoothie from '../../img/drinks/Smoothies/CoconutCoffeeSmoothie.jpg';
+import MatchaSmoothie from '../../img/drinks/Smoothies/MatchaSmoothie.jpg';
 
 
 //Coffee
@@ -72,7 +72,7 @@ import TiramisuCoffee from '../../img/drinks/Coffee/TiramisuCoffee.jpg';
 import BananaCoffee from '../../img/drinks/Coffee/BananaCoffee.jpg';
 import MochaCoffee from '../../img/drinks/Coffee/MochaCoffee.jpg';
 import HokkaidoCoffee from '../../img/drinks/Coffee/HokkaidoCoffee.jpg';
-import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.JPG';
+import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.jpg';
 // import CoconutCoffee from '../../img/drinks/Coffee/CoconutCoffee.jpg';
 
 export const topDrinks = [
