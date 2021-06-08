@@ -151,6 +151,7 @@ export const DrinkDesc = styled.div`
     font-family: 'Raleway', san-serif;
     font-size: 18px;
     font-weight: 500;
+    margin: 0 10%;
     text-align: center;
     // text-transform: uppercase;
 `
