@@ -13,16 +13,16 @@ import CocoMango from '../../img/drinks/TopDrinks/cocoMango.jpg';
 import IcyFlan from '../../img/drinks/TopDrinks/icyFlan.jpg';
 
 //Fresh Fruit Drinks
-import MelonBerry from '../../img/drinks/FreshFruitDrinks/melonBerry.jpg';
-import HawaiianTropical from '../../img/drinks/FreshFruitDrinks/hawaiianTropical.jpg';
-import LycheeLikeMe from '../../img/drinks/FreshFruitDrinks/lycheeLikeMe.jpg';
-import AloeVeraKiwi from '../../img/drinks/FreshFruitDrinks/aloeVeraKiwi.jpg';
-import SummerBreeze from '../../img/drinks/FreshFruitDrinks/summerBreeze.jpg';
-import CoupleMelon from '../../img/drinks/FreshFruitDrinks/coupleMelon.jpg';
-import HawaiiSunset from '../../img/drinks/FreshFruitDrinks/hawaiiSunsetSparkling.jpg';
-import SunFlower from '../../img/drinks/FreshFruitDrinks/sunflowerSparkling.jpg';
-import SecretGarden from '../../img/drinks/FreshFruitDrinks/secretGardenSparkling_copy.jpg';
-import HoneydewCooler from '../../img/drinks/FreshFruitDrinks/honeyDewCooler.jpg';
+import MelonBerry from '../../img/drinks/FreshFruitDrinks/MelonBerry.jpg';
+import HawaiianTropical from '../../img/drinks/FreshFruitDrinks/HawaiianTropical.jpg';
+import LycheeLikeMe from '../../img/drinks/FreshFruitDrinks/LycheeLikeMe.jpg';
+import AloeVeraKiwi from '../../img/drinks/FreshFruitDrinks/AloeVeraKiwi.jpg';
+import SummerBreeze from '../../img/drinks/FreshFruitDrinks/SummerBreeze.jpg';
+import CoupleMelon from '../../img/drinks/FreshFruitDrinks/CoupleMelon.jpg';
+import HawaiiSunset from '../../img/drinks/FreshFruitDrinks/HawaiiSunsetSparkling.jpg';
+import SunFlower from '../../img/drinks/FreshFruitDrinks/SunflowerSparkling.jpg';
+import SecretGarden from '../../img/drinks/FreshFruitDrinks/SecretGardenSparkling_copy.jpg';
+import HoneydewCooler from '../../img/drinks/FreshFruitDrinks/HoneyDewCooler.jpg';
 
 //Milk Tea
 import BrownSugarMilkTea from '../../img/drinks/MilkTea/BrownSugarMilkTea.jpg';
