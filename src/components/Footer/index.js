@@ -11,15 +11,12 @@ import {
     FooterLinkTitle,
     FooterCityTitle,
     FooterLink,
-    SocialMedia,
-    SocialMediaWrap,
-    SocialLogo,
     WebsiteRights,
     SocialIcons,
     SocialIconLink,
 } from './FooterElements'
 import {
-    FaFacebook, FaInstagram, FaYoutube
+    FaFacebook, FaInstagram
 } from 'react-icons/fa'
 
 import BunnyTeaWhiteLogo from '../../img/bunny-tea-logo-white.svg'

@@ -8,9 +8,9 @@ import {IconContext} from 'react-icons/lib'
 // import { Button } from './Button'
 // import {GiHamburgerMenu} from 'react-icons/gi'
 import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
-import BunnyTeaLogoTitle from '../../img/bunny-tea-logo-title.png'
+// import BunnyTeaLogoTitle from '../../img/bunny-tea-logo-title.png'
 import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
-import { Modal } from '../Modal/Modal';
+// import { Modal } from '../Modal/Modal';
 import {FaCaretDown} from 'react-icons/fa';
 import DropDown from '../DropDown/DropDown';
 import {
@@ -22,11 +22,9 @@ import {
     MobileIcon, 
     NavMenu,
     NavItem, 
-    NavLink,
     NavBtn,
     NavBtnLink,
 } from './NavbarElements';
-import { GlobalStyle } from '../globalStyles';
 
 // const Nav = styled.nav`
 //     height: 70px;
@@ -102,11 +100,6 @@ import { GlobalStyle } from '../globalStyles';
 
 const NavBar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false)
-    const [showModal, setShowModal] = useState(false)
-
-    const openModal = () => {
-        setShowModal(prev => !prev)
-    } 
 
     const [dropDown, setDropDown] = useState(false)
 
@@ -169,7 +162,6 @@ const NavBar = ({toggle}) => {
                                     Order Now
                                     <FaCaretDown style={{paddingLeft: '5px'}}/>
                             </NavBtnLink>
-                                    {/* <Modal showModal={showModal} setShowModal={setShowModal}/> */}
                                 {dropDown && <DropDown/>} 
                         </NavBtn>
                         

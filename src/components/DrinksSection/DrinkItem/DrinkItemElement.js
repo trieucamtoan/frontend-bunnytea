@@ -52,11 +52,10 @@ export const DescriptionTitle = styled.h2`
     font-family: 'Raleway', san-serif;
     font-weight: 600;
     color: grey;
-    font-size: 22px;
+    font-size: 30px;
     text-align: center;
     margin-top: 60px;
     text-transform: uppercase;
-
     @media (max-width: 368px){
         font-weight: 600;
     }
@@ -78,8 +77,9 @@ export const ButtonWrapper = styled.nav`
 export const Description = styled.div`
     color: black;
     font-family: 'Raleway', san-serif;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
     text-align: center;
     // text-transform: uppercase;
 `
@@ -109,10 +109,15 @@ export const ImgWrapper = styled.div`
     display: flex;
     justify-content: center;
     order: 2;
+    
+    margin: 0 auto;
+    
 `
 export const Img = styled.img`
     object-fit: cover;
     // flex-shrink: 0;
+    max-width: 500px;
+    max-height: 700px;
     width: 65vw;
     height: 65vw;
     

@@ -1,8 +1,7 @@
-import React, {useRef, useEffect, useCallBack, useState} from 'react'
+import React from 'react'
 import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
-import { IconContext } from 'react-icons/lib'
 
 const Background = styled.div`
     top: 0; 
@@ -69,18 +68,18 @@ const ModalContentWrapper = styled.div`
     height: 60%;
 `
 
-const HorizontalLineBottom = styled.span`
-    border: none; 
-    border-bottom: 3px solid gainsboro;
-    margin-bottom: 50px;
-    width: 65vw;
-    margin-left: auto;
-    margin-right: auto;
+// const HorizontalLineBottom = styled.span`
+//     border: none; 
+//     border-bottom: 3px solid gainsboro;
+//     margin-bottom: 50px;
+//     width: 65vw;
+//     margin-left: auto;
+//     margin-right: auto;
 
-    @media screen and (max-width: 1628px){
-        width: 90vw;
-    }
-`
+//     @media screen and (max-width: 1628px){
+//         width: 90vw;
+//     }
+// `
 const ModalImgWrapper = styled.div`
     outline: 1px solid red;
     display: flex;
@@ -186,8 +185,6 @@ const CloseModalButton = styled(MdClose)`
 `
 
 export const Modal = ({showModal, setShowModal, product}) => {
-    const modalRef = useRef()
-
     const animation = useSpring({
         config: {
             duration: 250

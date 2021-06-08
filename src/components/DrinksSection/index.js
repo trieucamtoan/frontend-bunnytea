@@ -5,25 +5,14 @@ import {
     MenuSectionContainer,
     MenuSectionWrapper,
     MenuSectionTitle,
-    HorizontalLineTop,
     HorizontalLineBottom,
     DrinkCard,
-    EmptyDrinkCard,
-    DrinkHeading,
     DrinkImg,
+    DrinkImgWrapper,
     DrinkInfo,
     DrinkTitle,
     DrinksWrapper,
-    MenuSectionRow,
-    Column1,
-    Column2,
-    Column3,
-    Column4,
-    TextWrapper,
-    ImgWrap,
-    Img,
-    DrinksCollection,
-    DrinkDesc
+    DrinkDesc,
 } from './DrinksElements'
 
 const DrinksSection = ({id, heading, data = []}) => {
@@ -44,14 +33,18 @@ const DrinksSection = ({id, heading, data = []}) => {
                     <HorizontalLineBottom/>
                     <DrinksWrapper>
                         {data.map((product, index) => {
+                            console.log(product.modalDesc)
                             return (
                                 <Link to={{
-                                    pathname: '/drinks/' + product.id,
+                                    pathname: '/drinks/' + product.path,
                                     state: {product: product},
                                   }} 
                                     style={{textDecoration: "none"}}>
                                     <DrinkCard key={index}>
-                                        <DrinkImg src={product.img} alt={product.alt}/>
+                                        <DrinkImgWrapper>
+                                            <DrinkImg src={product.img} alt={product.alt}/>
+                                        </DrinkImgWrapper>
+                                        
                                         <DrinkInfo>
                                             <DrinkTitle>{product.name}</DrinkTitle>
                                             <DrinkDesc>{product.desc}</DrinkDesc>

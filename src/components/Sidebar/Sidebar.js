@@ -7,7 +7,6 @@ import {
     SidebarMenu,
     SideBarLink,
     SideBtnWrap,
-    SideBarRoute
 } from './SidebarElements';
 
 const SideBar = ({isOpen, toggle}) => {
@@ -19,14 +18,15 @@ const SideBar = ({isOpen, toggle}) => {
             <SideBarWrapper>
                 <SidebarMenu>
                     <SideBarLink 
-                        to='topDrinks' 
+                        to='top-drinks' 
                         onClick={toggle}
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
                         offset={-80}
-                    > Menu</SideBarLink>
+                    >Menu
+                    </SideBarLink>
                     <SideBarLink 
                         to='location' 
                         onClick={toggle}

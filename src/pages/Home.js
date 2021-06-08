@@ -1,13 +1,14 @@
 import React, {useState} from 'react'
 import SideBar from '../components/Sidebar/Sidebar';
 import NavBar from '../components/Navbar/Navbar';
-import HeroSection from '../components/HeroSection';
-import InfoSection from '../components/InfoSection';
+// import HeroSection from '../components/HeroSection';
+// import InfoSection from '../components/InfoSection';
 import DrinksSection from '../components/DrinksSection';
-import {locationInfo} from '../components/InfoSection/data';
+// import {locationInfo} from '../components/InfoSection/data';
 import LocationSection from '../components/LocationSection';
 import {LaQuinta} from '../components/LocationSection/data';
-import Services from '../components/Services';
+// import Services from '../components/Services';
+
 import {
     topDrinks, 
     freshFruitDrinks,

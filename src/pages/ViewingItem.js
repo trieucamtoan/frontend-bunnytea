@@ -3,7 +3,7 @@ import SideBar from '../components/Sidebar/Sidebar';
 import NavBar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer';
 import DrinkItem from '../components/DrinksSection/DrinkItem'
-import { useLocation, useHistory} from "react-router";
+import { useLocation} from "react-router";
 const ViewingItem = props => {
     const [isOpen, setIsOpen] = useState(false)
     const location = useLocation()

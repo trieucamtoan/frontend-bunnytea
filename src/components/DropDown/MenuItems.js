@@ -1,5 +1,3 @@
-import Grubhub from '../../img/icons/grubhub.svg';
-import Doordash from '../../img/icons/doordash.svg';
 export const MenuItems = [
     {
         title: 'Delivery',

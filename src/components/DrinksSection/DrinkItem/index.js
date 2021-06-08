@@ -13,7 +13,6 @@ import {
     Button
 } from './DrinkItemElement'
 
-import {Link} from 'react-router-dom'
 const DrinkItem = ({product}) => {
     return (
         <div>
@@ -27,6 +26,7 @@ const DrinkItem = ({product}) => {
                             <Title>{product.name}</Title>
                             <DescriptionTitle>Description</DescriptionTitle>
                             <Description>{product.desc}</Description>
+                            <Description style={{fontSize: '13px', textTransform: 'uppercase', fontWeight: '600'}}>{product.modalDesc}</Description>
                         </TitleDescWrapper>
                     </InfoWrapper>
                     <ButtonWrapper>

@@ -79,9 +79,16 @@ export const DrinksWrapper = styled.div`
 `
 
 export const DrinkCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
     margin: 0 auto;
-    width: 80vw;
+    // width: 80vw;
     cursor: pointer;
+    text-decoration: none;
+    
+
     @media (min-width: 768px){
         width: 40vw; 
     }
@@ -95,12 +102,23 @@ export const DrinkCard = styled.div`
     }
 
 `
+export const DrinkImgWrapper = styled.div`
+    overflow: hidden;
+`
 export const DrinkImg = styled.img`
     object-fit: cover;
     height: 95vw;
     width: 80vw;
+    
     pointer-events: none;
     -webkit-user-select: none;
+
+    user-select: none;
+    transition: 0.5s all ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
+    
     @media (min-width: 768px){
         width: 40vw; 
         height: 45vw;
