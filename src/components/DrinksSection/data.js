@@ -21,7 +21,7 @@ import SummerBreeze from '../../img/drinks/FreshFruitDrinks/SummerBreeze_copy.jp
 import CoupleMelon from '../../img/drinks/FreshFruitDrinks/CoupleMelon_copy.jpg';
 import HawaiiSunset from '../../img/drinks/FreshFruitDrinks/HawaiiSunsetSparkling_copy.jpg';
 import SunFlower from '../../img/drinks/FreshFruitDrinks/SunflowerSparkling_copy.jpg';
-import SecretGarden from '../../img/drinks/FreshFruitDrinks/SecretGardenSparkling_copy.jpg';
+import SecretGarden from '../../img/drinks/FreshFruitDrinks/SecretGardenSparkling.jpg';
 import HoneydewCooler from '../../img/drinks/FreshFruitDrinks/HoneyDewCooler_copy.jpg';
 
 //Milk Tea
