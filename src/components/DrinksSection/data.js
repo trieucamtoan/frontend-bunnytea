@@ -1,5 +1,5 @@
 //Top Drinks
-import SignatureDrink from '../../img/drinks/TopDrinks/signatureWithOreo.jpg';
+import SignatureDrink from '../../img/drinks/TopDrinks/signature.jpg';
 import PremiumJasmineMilkTea from '../../img/drinks/TopDrinks/pjmt.jpg';
 import GoldenMilkTea from '../../img/drinks/TopDrinks/gmt.jpg';
 import BoboLatte from '../../img/drinks/TopDrinks/bobolatte.jpg';
@@ -17,7 +17,7 @@ import MelonBerry from '../../img/drinks/FreshFruitDrinks/MelonBerry_copy.jpg';
 import HawaiianTropical from '../../img/drinks/FreshFruitDrinks/HawaiianTropical_copy.jpg';
 import LycheeLikeMe from '../../img/drinks/FreshFruitDrinks/LycheeLikeMe_copy.jpg';
 import AloeVeraKiwi from '../../img/drinks/FreshFruitDrinks/AloeVeraKiwi_copy.jpg';
-import SummerBreeze from '../../img/drinks/FreshFruitDrinks/SummerBreeze_copy.jpg';
+import SummerBreeze from '../../img/drinks/FreshFruitDrinks/SummerBreeze.jpg';
 import CoupleMelon from '../../img/drinks/FreshFruitDrinks/CoupleMelon_copy.jpg';
 import HawaiiSunset from '../../img/drinks/FreshFruitDrinks/HawaiiSunsetSparkling_copy.jpg';
 import SunFlower from '../../img/drinks/FreshFruitDrinks/SunflowerSparkling_copy.jpg';
@@ -80,12 +80,12 @@ import BrownSugarCoffee from '../../img/drinks/Coffee/BrownSugarCoffee.jpg';
 // import CoconutCoffee from '../../img/drinks/Coffee/CoconutCoffee.jpg';
 
 export const Obj_SignatureMilkTeaWithOreo = {
-    path: 'signature-milk-tea-with-oreo',
+    path: 'signature-milk-tea',
     img: SignatureDrink,
-    alt: "Signature Milk Tea With Oreo",
-    name: "Signature Milk Tea With Oreo",
+    alt: "Signature Milk Tea",
+    name: "Signature Milk Tea",
     desc: "",
-    modalDesc: "*Recommended with Cheese Cream Foam/ Oreo"
+    modalDesc: "*Recommended with Cheese Cream Foam"
 }
 export const Obj_PremiumJasmineGreenMilkTea = {
     path: 'premium-jasmine-milk-tea',
@@ -209,25 +209,29 @@ export const Obj_HawaiiSunset = {
     path: 'hawaii-sunset',
     img: HawaiiSunset,
     alt: "Hawaii Sunset",
-    name: "Hawaii Sunset"
+    name: "Hawaii Sunset",
+    desc: "Combination Strawberry & Mango Flavor with Fresh fruit Chunks"
 }
 export const Obj_SunFlower = {
     path: 'sunflower',
     img: SunFlower,
     alt: "SunFlower",
-    name: "SunFlower"
+    name: "SunFlower",
+    desc: "Combination Peach & Mango Flavor with Fresh fruit Chunks"
 }
 export const Obj_SecretGarden = {
     path: 'secret-garden',
     img: SecretGarden,
     alt: "SecretGarden",
-    name: "Secret Garden"
+    name: "Secret Garden",
+    desc: "Combination Kiwi & Pineapple Flavor with Fresh fruit Chunks"
 }
 export const Obj_HoneydewCooler = {
     path: 'honeydew-cooler',
     img: HoneydewCooler,
     alt: "Honeydew Cooler",
-    name: "Honeydew Cooler"
+    name: "Honeydew Cooler",
+    desc: 'Honeydew Flavor with Lychee Jelly'
 }
 export const Obj_BrownSugarMilkTea = {
     path: 'brown-sugar-milk-tea',
@@ -349,10 +353,10 @@ export const Obj_CremeBrulee = {
     desc: ""
 }
 export const Obj_OreoCremeBrulee = {
-    path: "oreo-creme-brulee",
+    path: "oreo-brulee-fresh-milk",
     img: OreoCremeBrulee,
-    alt: "Oreo CrèmeBrûlée Fresh Milk",
-    name: "Oreo CrèmeBrûlée Fresh Milk",
+    alt: "Oreo Brulee Fresh Milk",
+    name: "Oreo Brulee Fresh Milk",
     desc: ""
 }
 
@@ -432,7 +436,7 @@ export const Obj_ThaiCloudy = {
     img: ThaiCloudy,
     alt: "Thai Cloudy (Thai Tea Slush)",
     name: "Thai Cloudy (Thai Tea Slush)",
-    desc: ""
+    desc: "Thai Slush witn Cheese Foam"
 }
 export const Obj_PineappleTeaSlushy = {
     path: 'pineapple-tea-slushy',
