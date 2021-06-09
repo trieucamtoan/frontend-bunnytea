@@ -8,9 +8,9 @@ import {IconContext} from 'react-icons/lib'
 // import { Button } from './Button'
 // import {GiHamburgerMenu} from 'react-icons/gi'
 import BunnyTeaLogo from '../../img/bunny-tea-logo-black.svg'
-import BunnyTeaLogoTitle from '../../img/bunny-tea-logo-title.png'
+// import BunnyTeaLogoTitle from '../../img/bunny-tea-logo-title.png'
 import BunnyTeaTitle from '../../img/bunny-tea-title-black.svg'
-import { Modal } from '../Modal/Modal';
+// import { Modal } from '../Modal/Modal';
 import {FaCaretDown} from 'react-icons/fa';
 import DropDown from '../DropDown/DropDown';
 import {
@@ -22,11 +22,9 @@ import {
     MobileIcon, 
     NavMenu,
     NavItem, 
-    NavLink,
     NavBtn,
     NavBtnLink,
 } from './NavbarElements';
-import { GlobalStyle } from '../globalStyles';
 
 // const Nav = styled.nav`
 //     height: 70px;
@@ -102,11 +100,6 @@ import { GlobalStyle } from '../globalStyles';
 
 const NavBar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false)
-    const [showModal, setShowModal] = useState(false)
-
-    const openModal = () => {
-        setShowModal(prev => !prev)
-    } 
 
     const [dropDown, setDropDown] = useState(false)
 
@@ -124,7 +117,7 @@ const NavBar = ({toggle}) => {
 
 
     const changeNav = () => {
-        if (window.scrollY >= 70){
+        if (window.scrollY >= 80){
             setScrollNav(true)
         } else {
             setScrollNav(false)
@@ -136,21 +129,24 @@ const NavBar = ({toggle}) => {
     }, [])
 
     const toggleHome = () => {
-        scroll.scrollToTop()
+        scroll.scrollToTop();
     }
 
     return (
         <IconContext.Provider value={{color: '#fff'}}>
-        <Nav scrollNav = {scrollNav}>
+        <Nav scrollNav={scrollNav}>
             <NavBarContainer>
                 <NavLogoTitleWrapper>
                     <NavLogo to ="/" onClick={toggleHome}>
                             <img 
                             src={BunnyTeaLogo}
+                            // style={{width: '60px'}}
                             alt = "Bunny Logo"/>
                         </NavLogo>
                         <NavTitle to = "/" onClick={toggleHome}>
-                                <img src={BunnyTeaTitle} alt="Bunny Title" />
+                                <img src={BunnyTeaTitle} 
+                                // style={{width: '400px', height: '80px'}}
+                                alt="Bunny Title" />
                         </NavTitle>
                     </NavLogoTitleWrapper>
 
@@ -165,9 +161,7 @@ const NavBar = ({toggle}) => {
                             <NavBtnLink>
                                     Order Now
                                     <FaCaretDown style={{paddingLeft: '5px'}}/>
-                                    
                             </NavBtnLink>
-                                    {/* <Modal showModal={showModal} setShowModal={setShowModal}/> */}
                                 {dropDown && <DropDown/>} 
                         </NavBtn>
                         
@@ -185,17 +179,17 @@ const NavBar = ({toggle}) => {
                         exact='true'
                         offset={-70}
                         >MENU</NavLink>
-                    </NavItem>
-                    <NavItem>
+                    </NavItem> */}
+                    {/* <NavItem>
                         <NavLink to='location'
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true'
-                        // offset={-71}
+                        offset={-71}
                         >LOCATION</NavLink>
-                    </NavItem>
-                    <NavItem>
+                    </NavItem> */}
+                    {/* <NavItem>
                         <NavLink to='contact'
                         smooth={true} 
                         duration={500} 

@@ -44,8 +44,8 @@ export const NavLogoTitleWrapper = styled.div`
 
 export const NavLogo = styled(LinkRouter)`
     margin: 10px 0 0 4vw;
-    justify-content: center;
     width: 60px;
+    justify-content: center;
     color: #fff;
     cursor: pointer;
 `
@@ -55,9 +55,9 @@ export const NavTitle = styled(LinkRouter)`
     justify-self: flex-start;
     padding-left: 40px;
     cursor: pointer;
-    width: 250px;
+    width: 400px;
     height: 80px;
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 876px) {
         display: none;
     }
 `

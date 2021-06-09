@@ -3,47 +3,25 @@ import {Link as LinkRouter} from 'react-router-dom'
 
 
 export const FooterContainer = styled.footer`
-    background-color: #101522;
-`
-
-export const FooterLogoTitleWrapper = styled.div`
-    display: flex;
-`
-
-export const FooterLogo = styled(LinkRouter)`
-    margin: 10px 0 0 4vw;
-    justify-content: center;
-    width: 60px;
-    color: #fff;
-    cursor: pointer;
-`
-
-export const FooterTitle = styled(LinkRouter)`
-    display: flex;
-    justify-self: flex-start;
-    padding-left: 40px;
-    cursor: pointer;
-    width: 250px;
-    height: 80px;
-    @media screen and (max-width: 750px) {
-        display: none;
-    }
+    background-color: black;
+    width: 100vw;
 `
 
 export const FooterWrap = styled.div`
-    padding: 48px 24px;
+    padding: 40px calc((100vw - 1350px) / 2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
+    align-items: left;
     margin: 0 auto;
+    
+    // @media screen and (max-width: 600px) {
+    //     align-items: center;
+    // }
 `
 
 export const FooterLinksContainer = styled.div`
-    display: flex;
-    justify-content: center;
-
+    display: block;
+    
     @media  screen and (max-width: 820px) {
         padding-top: 32px;
     }
@@ -52,43 +30,104 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
     display: flex;
 
-    @media screen and (max-width: 820px) {
+    flex-direction: row;
+    margin: 30px;
+    justify-content: start;
+    flex-direction: row;
+    @media screen and (max-width: 600px) {
         flex-direction: column;
     }
 `
 
 export const FooterLinkItems = styled.div`
     display: flex;
-    flex-direction: column;
-    align-iitems: flex-start;
-    margin: 16px;
-    text-align: left;
-    width: 160px;
     box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     color: #fff;
-
-    @media and (max-width: 420px) {
-        margin: 0;
-        padding: 10px;
-        width: 100%;
-    }
+    padding: 30px;
 `
 
 export const FooterLinkTitle = styled.h1`
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 16px;
 `
 
-export const FooterLink = styled(LinkRouter)`
+export const FooterCityTitle = styled.h1`
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+`
+
+export const FooterLink = styled.a`
     color: #fff;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
+    text-decoration: underline;
 
     &:hover {
         color: #01bbf71;
         transition: 0.3s ease-out;
     }
+`
+
+export const SocialIcons = styled.div`
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+`
+
+export const SocialIconLink = styled.a`
+    color: #fff;
+    font-size: 20px;
+    padding-right: 20px;
+`
+
+export const FooterLogoTitleWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px;
+    margin-top: 100px;
+    margin-left: 30px;
+    padding: 0 30px;
+    // outline: 1px solid yellow;
+    // border: 1px solid white;
+
+    @media screen and (max-width: 600px) {
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+`
+
+export const FooterLogo = styled(LinkRouter)`
+    color: #fff;
+    cursor: pointer;
+    // outline: 1px solid blue;
+`
+
+export const FooterTitle = styled(LinkRouter)`
+    display: flex;
+    justify-self: flex-start;
+    cursor: pointer;
+    max-width: 300px;
+    height: 60px;
+    margin-left: 30px;
+
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-top: 10px;
+        height: 30px;
+        max-width: 60vw;
+    }
+    
 `
 export const SocialMedia = styled.section`
     max-width: 1000px;
@@ -102,7 +141,7 @@ export const SocialMediaWrap = styled.div`
     max-width: 1100px;
     margin: 40px auto 0 auto;
 
-    @media screen and (max-width: 820px){
+    @media screen and (max-width: 768px){
         flex-direction: column;
     }
 `
@@ -119,19 +158,11 @@ export const SocialLogo = styled(LinkRouter)`
     font-weight: bold;
 `
 
-export const WebsiteRights = styled.small`
-    color: #fff;
-    margin-bottom: 16px;
-`
-
-export const SocialIcons = styled.div`
+export const WebsiteRights = styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 240px;
+    margin: 30px;
+    color: #fff;
+    padding: 30px;
 `
 
-export const SocialIconLink = styled.a`
-    color: #fff;
-    font-size: 24px;
-`

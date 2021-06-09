@@ -1,13 +1,18 @@
-import React, {useState} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
-import styled from 'styled-components';
-import Home from './pages/Home'
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Home from './pages/Home';
+import ScrollToTop from '../src/components/ScrollToTop.js'
+import ViewingItem from './pages/ViewingItem';
 
 function App() {
-  
+  // document.addEventListener('contextmenu', handleRightClick);
   return (
     <Router>
-        <Home/>
+      <ScrollToTop/>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/drinks/:path" component={ViewingItem}/>
+      </Switch>
     </Router>
   );
 }
