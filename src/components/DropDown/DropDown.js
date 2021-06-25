@@ -1,9 +1,18 @@
 import React, {useState} from 'react'
 import { MenuItems } from './MenuItems';
+import ReactGa from 'react-ga';
 import './DropDown.css';
 const DropDown = () => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
+
+    const ClickHandler = event => {
+        setClick(false);
+        ReactGa.event({
+            category: "Order Now Button",
+            action: event.target
+        })
+    }
     return (
         <>
             <ul
@@ -13,7 +22,7 @@ const DropDown = () => {
             {MenuItems.map((item, index) => {
                 return (
                     <li key={index}>
-                        <a className={item.cName} href={item.path} onClick={() => setClick(false)}>
+                        <a className={item.cName} href={item.path} onClick={ClickHandler}>
                             {item.title}
                         </a>
                     </li>
