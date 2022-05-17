@@ -40,6 +40,7 @@ export const NavBarContainer = styled.div`
 `
 export const NavLogoTitleWrapper = styled.div`
     display: flex;
+    align-items: center;
 `
 
 export const NavLogo = styled(LinkRouter)`
@@ -55,8 +56,8 @@ export const NavTitle = styled(LinkRouter)`
     justify-self: flex-start;
     padding-left: 40px;
     cursor: pointer;
-    width: 400px;
-    height: 80px;
+    max-width: 35vw;
+    max-height: 39px;
     @media screen and (max-width: 876px) {
         display: none;
     }
