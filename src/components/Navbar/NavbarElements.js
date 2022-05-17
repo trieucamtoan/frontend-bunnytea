@@ -58,7 +58,7 @@ export const NavTitle = styled(LinkRouter)`
     cursor: pointer;
     with: 300px;
     max-width: 35vw;
-    max-height: 39px;
+    height: 39px;
     @media screen and (max-width: 876px) {
         display: none;
     }
