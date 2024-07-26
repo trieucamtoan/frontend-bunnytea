@@ -8,7 +8,7 @@ export const MenuItems = [
     {
         title: 'Pick Up',
         // icon: Doordash,
-        path: 'https://www.clover.com/online-ordering/ding-tea--la-quinta-la-quinta',
+        path: 'https://www.clover.com/online-ordering/the-bunny-tea-la-quinta',
         cName: 'dropdown-link'
     }
     
